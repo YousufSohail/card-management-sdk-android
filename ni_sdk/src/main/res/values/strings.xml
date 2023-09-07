@@ -24,6 +24,11 @@
     <string name="change_pin_description_enter_current_pin">Please enter your current PIN</string>
     <string name="change_pin_description_enter_new_pin">Please enter the new PIN</string>
 
+    // view pin fragment
+    <string name="view_pin_title">View PIN</string>
+    <string name="get_pin_description">Your PIN for the card ending %1$s</string>
+    <string name="get_pin_countdown_timer_text">Your view will be hidden in %1$d seconds</string>
+
     // non translatable strings
     <string name="app_name" translatable="false">NICardManagementSDK</string>
     <string name="_1" translatable="false">1</string>

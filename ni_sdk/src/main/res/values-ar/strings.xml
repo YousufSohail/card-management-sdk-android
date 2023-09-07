@@ -24,4 +24,9 @@
     <string name="change_pin_title">تغيير الرقم السري (PIN)</string>
     <string name="change_pin_description_enter_current_pin">الرجاء ادخال الرقم السري الحالي (PIN)</string>
     <string name="change_pin_description_enter_new_pin">الرجاء ادخال الرقم السري الجديد (PIN)</string>
+
+    // view pin fragment
+    <string name="view_pin_title">View PIN</string>
+    <string name="get_pin_description">Your PIN for the card ending %s</string>
+    <string name="get_pin_countdown_timer_text">Your view will be hidden in %d seconds</string>
 </resources>

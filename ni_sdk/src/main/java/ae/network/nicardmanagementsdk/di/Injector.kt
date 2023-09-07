@@ -1,13 +1,11 @@
 package ae.network.nicardmanagementsdk.di
 
 import ae.network.nicardmanagementsdk.api.models.input.NIInput
-import ae.network.nicardmanagementsdk.core.ChangePinCoreComponent
-import ae.network.nicardmanagementsdk.core.GetCardDetailsCoreComponent
-import ae.network.nicardmanagementsdk.core.SetPinCoreComponent
-import ae.network.nicardmanagementsdk.core.VerifyPinCoreComponent
+import ae.network.nicardmanagementsdk.core.*
 import ae.network.nicardmanagementsdk.network.utils.ConnectionLiveData
 import ae.network.nicardmanagementsdk.presentation.ui.card_details.CardDetailsViewModel
 import ae.network.nicardmanagementsdk.presentation.ui.card_details.fragment.CardDetailsFragmentViewModel
+import ae.network.nicardmanagementsdk.presentation.ui.view_pin.ViewPinFragmentViewModel
 import ae.network.nicardmanagementsdk.presentation.ui.change_pin.ChangePinViewModel
 import ae.network.nicardmanagementsdk.presentation.ui.set_pin.SetPinViewModel
 import ae.network.nicardmanagementsdk.presentation.ui.verify_pin.VerifyPinViewModel
@@ -61,6 +59,13 @@ class Injector private constructor(context: Context) {
         return ViewModelFactory {
             val changePinCoreComponent = ChangePinCoreComponent.fromFactory(niInput)
             ChangePinViewModel(changePinCoreComponent, connectionLiveData)
+        }
+    }
+
+    fun provideViewPinFragmentViewModelFactory(niInput: NIInput): ViewModelFactory<ViewPinFragmentViewModel> {
+        return ViewModelFactory {
+            val viewPinComponent = ViewPinCoreComponent.fromFactory(niInput)
+            ViewPinFragmentViewModel(viewPinComponent, connectionLiveData)
         }
     }
 }
